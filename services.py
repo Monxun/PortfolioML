@@ -7,8 +7,8 @@ import streamlit as st
 import logging
 import os
 
-files = os.listdir('./data')
-workbooks = [item for item in files if '.xlsx' in item]
+files_dir = os.listdir('./data')
+files = [item for item in files_dir if '.csv' or '.xlsx' in item]
 
 logging.basicConfig(filename='log.log', filemode='w', format='%(asctime)s - %(levelname)s %(message)s', datefmt='%H:%M:%S', encoding='utf-8', level=logging.DEBUG, force=True)
 
